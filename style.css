@@ -53,7 +53,23 @@ body {
 }
 
 .header .logo img {
-    border-radius: 50%;
+    border-radius: 100%;
+    animation: RotateImage 1s linear 0.2s infinite paused;
+}
+
+.header .logo:hover img {
+    animation-play-state: running;
+}
+
+@keyframes RotateImage {
+    from 
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    }    
 }
 
 .link-container {
@@ -118,10 +134,24 @@ body {
     text-align: center;
 }
 
-.kuku-poster img {
+.kuku-poster img{
     border: 5px #376490 solid;
     border-radius: 12px;
     box-shadow: 12px 12px 15px rgb(33, 33, 33);
+}
+
+/* making a hover animation */
+
+.giphy {
+    display: none;
+}
+
+.kuku-poster:hover .giphy {
+    display: block;
+}
+
+.kuku-poster:hover .giphy_static {
+    display: none;
 }
 
 /* Events design */
